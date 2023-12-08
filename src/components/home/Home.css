@@ -1,0 +1,30 @@
+.home-button {
+  background-color: #a6ff35;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 10px 50px;
+  border: none;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+.home-sec1 {
+  width: 70%;
+  margin: 10% auto;
+  margin-top: 17%;
+  /* margin-bottom: 0px !important; */
+}
+.home-sec1 h1 {
+  line-height: 4rem;
+}
+.home-pera {
+  color: silver;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.667em;
+  padding: 0px 100px;
+}

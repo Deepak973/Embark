@@ -1,15 +1,34 @@
 import React from "react";
 import { useState } from "react";
+import arrow from "../../assests/right-arrow.png";
+import "../home/Home.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useAccount } from "wagmi";
 import { useNavigate } from "react-router-dom";
+import img1 from "../../assests/filecoin.png";
+import img2 from "../../assests/celo.jpg";
+import img3 from "../../assests/safe.png";
+import img8 from "../../assests/arbitrum.jpg";
+import img5 from "../../assests/chainlink.jpg";
+import img6 from "../../assests/xdc.webp";
+import img7 from "../../assests/op.png";
+// import Footer from "../footer/Footer";
 
 function Home() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+  const { address, isConnected, isDisconnected } = useAccount();
+  const walletAddress = address;
+  console.log(walletAddress);
   const navigate = useNavigate();
-  const handleDashboardNavigation = () => {};
+  const handleDashboardNavigation = () => {
+    if (isConnected) {
+      navigate("/all-daos");
+    } else {
+      alert("Please connect your wallet");
+    }
+  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleBeforeChange = (current, next) => {
     setActiveIndex(next);
@@ -30,11 +49,15 @@ function Home() {
 
   return (
     <div>
+      <img src={img1} className="filecoin"></img>
+      <img src={img2} className="celo"></img>
+      <img src={img3} className="safe"></img>
+      <img src={img8} className="arbitrum"></img>
+      <img src={img5} className="chainlink"></img>
+      <img src={img6} className="xdc"></img>
+      <img src={img7} className="op"></img>
       <div className="home-sec1">
-        <h1>
-          Buy and trade cryptos like never{" "}
-          <span style={{ color: "#a6ff35" }}>before</span>.
-        </h1>
+        <h1></h1>
         <div className="home-pera">
           Lorem ipsum dolor sit amet consectetur adipiscing elit at pharetra nec
           sed erat non metus suspendisse mus non lectus vel vitae massa id in in
@@ -46,7 +69,9 @@ function Home() {
           onClick={() => handleDashboardNavigation()}
         >
           Explore DOAs
-          <div id="dub-arrow"></div>
+          <div id="dub-arrow">
+            <img src={arrow} />
+          </div>
         </button>
       </div>
       <section
@@ -108,6 +133,7 @@ function Home() {
           </div>
         </Slider>
       </section>
+      {/* <Footer /> */}
     </div>
   );
 }
