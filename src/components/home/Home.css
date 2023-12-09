@@ -12,6 +12,46 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+#button-7 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+
+#button-7 a {
+  position: relative;
+  left: 0;
+  transition: all 0.35s ease-Out;
+}
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: #fcffff;
+  right: 235px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}
+
+#button-7 img {
+  width: 20px;
+  height: auto;
+}
+
+#button-7:hover #dub-arrow {
+  right: 0;
+}
+
+#button-7:hover a {
+  right: 150px;
+}
 .home-sec1 {
   width: 70%;
   margin: 10% auto;
@@ -27,4 +67,234 @@
   font-weight: 400;
   line-height: 1.667em;
   padding: 0px 100px;
+}
+.filecoin {
+  width: 90px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 50% 0% 0% 7%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.celo {
+  width: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 27% 0% 0% 18%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.safe {
+  width: 90px;
+  background: #f8f9fa;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  display: none;
+  inset: 20% 0% 0% 38%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.op {
+  width: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 65% 0% 0% 72%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.xdc {
+  width: 90px;
+  background: #f8f9fa;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 41% 0% 0% 85%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.arbitrum {
+  width: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 23% 0% 0% 71%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+.chainlink {
+  width: 70px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  inset: 70% 0% 0% 20%;
+  animation: myAnimation 2s ease-in-out infinite;
+}
+@keyframes myAnimation {
+  0% {
+    transform: translate3d(0px, 0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0px, -19.2309px, 0px) rotate(-5.1923deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) rotate(0deg);
+  }
+}
+.homepage-secion3-main-template {
+  margin: 0 auto;
+  /* padding-top: 50px; */
+  padding-bottom: 150px;
+  overflow: hidden;
+}
+.slick-slider {
+  padding: 20px 0px;
+}
+.section3-card {
+  width: 500px !important;
+  padding: 50px;
+  height: 250px;
+  display: flex !important;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-shrink: 0;
+  border: 1px solid #00000000;
+  background: rgba(33, 34, 40, 0.5);
+  border-radius: 20px;
+}
+
+.homepage-secion3-main-template .rec .rec-pagination {
+  box-sizing: border-box;
+  padding: 0px;
+  transition: all 250ms ease 0s;
+  border: none;
+  margin: 5px;
+  background-color: rgb(255 255 255) !important;
+  font-size: 1.3em;
+  content: "";
+  display: none !important;
+  height: 10px;
+  width: 10px;
+  box-shadow: rgb(0 6 255) 0px 0px 1px 3px !important;
+  border-radius: 50%;
+  outline: none;
+}
+.homepage-secion3-main-template .rec.rec-arrow {
+  background-color: #00ffff !important;
+}
+.rec.rec-arrow:hover {
+  background: none !important;
+}
+.homepage-secion3-main-template .rec-carousel {
+  width: 75% !important;
+  margin: 80px 0px 50px 0px;
+}
+.section3-card-title {
+  color: #b0f127;
+  text-align: center;
+  /* font-family: "Josefin Sans"; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 30px 0px;
+  line-height: 174.523%; /* 62.828px */
+  letter-spacing: 0.9px;
+  width: 409.922px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  margin: 10px auto;
+}
+.section3-card-xcompute {
+  color: white;
+  text-align: center;
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 174.523%;
+  letter-spacing: 0.9px;
+  width: 409.922px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.section3-card-desc {
+  color: white;
+  text-align: center;
+  /* font-family: "Josefin Sans"; */
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 168.023%;
+  letter-spacing: 1.36px;
+}
+.section3-card-button {
+  border-radius: 48px;
+  background: #0ff;
+  width: 200px;
+  height: 55px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  border: none;
+  color: #000;
+  text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Josefin Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 154.023%;
+  letter-spacing: 4.72px;
+}
+
+.slick-list {
+  transform: none !important;
+  width: 50%;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+.center-slider .slick-slide {
+  opacity: 0.5;
+}
+.slick-slider {
+  width: 100% !important;
+}
+.slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  transform: scale(0.8);
+}
+
+.slick-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.slick-dots {
+  position: absolute;
+  bottom: -50px !important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 10px !important;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: #a6ff35 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
