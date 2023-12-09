@@ -2,11 +2,14 @@ import React from "react";
 import { useState } from "react";
 import arrow from "../../assests/right-arrow.png";
 import "../home/Home.css";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useAccount } from "wagmi";
+import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
+import AllDaos from "../Daos/AllDaos";
 import img1 from "../../assests/filecoin.png";
 import img2 from "../../assests/celo.jpg";
 import img3 from "../../assests/safe.png";
@@ -14,7 +17,7 @@ import img8 from "../../assests/arbitrum.jpg";
 import img5 from "../../assests/chainlink.jpg";
 import img6 from "../../assests/xdc.webp";
 import img7 from "../../assests/op.png";
-// import Footer from "../footer/Footer";
+import Footer from "../footer/Footer";
 
 function Home() {
   const { address, isConnected, isDisconnected } = useAccount();
@@ -57,7 +60,6 @@ function Home() {
       <img src={img6} className="xdc"></img>
       <img src={img7} className="op"></img>
       <div className="home-sec1">
-        <h1></h1>
         <div className="home-pera">
           Lorem ipsum dolor sit amet consectetur adipiscing elit at pharetra nec
           sed erat non metus suspendisse mus non lectus vel vitae massa id in in
@@ -133,7 +135,7 @@ function Home() {
           </div>
         </Slider>
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
