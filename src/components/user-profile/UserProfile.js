@@ -102,7 +102,7 @@ function UserProfile(props) {
                     backgroundColor: "white",
                   }}
                 />
-                <h2 style={{ padding: "20px", fontSize: "2rem" }}>User1</h2>
+                <h2 style={{ padding: "20px", fontSize: "2rem" }}>John</h2>
               </div>
               <div className="delegate-bio">
                 <div
@@ -158,18 +158,14 @@ function UserProfile(props) {
                     textAlign: "left",
                     padding: "5px",
                   }}
-                >
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit at
-                  pharetra nec sed erat non metus suspendisse mus non lectus vel
-                  vitae massa id in in turpis posuere laoreet tortor.
-                </div>
+                ></div>
               </div>
             </div>
           </div>
           <div class="col-md-9 mp-sec2">
             <h1 style={{ padding: "10px 0px" }}>Ready, set, mentor! 🚀</h1>
             <div style={{ padding: "10px 0px", fontSize: "20px" }}>
-              You've completed X hours of mentoring.
+              You've completed 2 hours of mentoring.
             </div>
             <div
               style={{

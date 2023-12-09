@@ -6,12 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { arbitrumSepolia, baseSepolia, celoAlfajores } from "wagmi/chains";
+import { arbitrumSepolia, baseGoerli, celoAlfajores } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
-  [arbitrumSepolia, baseSepolia, celoAlfajores],
+  [arbitrumSepolia, baseGoerli, celoAlfajores],
   [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
 );
 const { connectors } = getDefaultWallets({
