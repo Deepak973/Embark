@@ -13,16 +13,60 @@
   justify-content: center;
   margin-top: 50px;
 }
+.explore-dao {
+  border: 1px solid #00000000;
+  background: rgba(33, 34, 40, 0.5);
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 75%;
+  margin: 0px auto;
+  text-align: left;
+}
+.api-card {
+  border: 1px solid #2f2f2f;
+  background: rgba(33, 34, 40, 0.5);
+  border-radius: 18px;
+  overflow: hidden;
+  width: 100%;
+  transform: translate(0);
+  display: flex;
+  cursor: pointer;
+  min-height: 25vh;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+  min-width: 0;
+  /* margin-top: 50px; */
+  justify-content: space-around;
+}
 
+.api-card > img {
+  object-fit: contain;
+  width: 82px;
+  height: 82px;
+  min-width: 82px;
+  border-radius: 9999px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.card-body a {
+  margin-top: auto;
+}
 /*   
-  .api-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1); 
-  } */
+.api-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); 
+} */
 
 /* .api-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  } */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
 
 .api-image {
   width: 50px;
