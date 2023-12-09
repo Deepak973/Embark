@@ -53,7 +53,27 @@ const ConnectButtonCustom = () => {
                   </button>
                 );
               }
-
+              if (chain.unsupported) {
+                return (
+                  <button
+                    onClick={openChainModal}
+                    type="button"
+                    style={{
+                      padding: "10px 30px",
+                      background: "#b0f127",
+                      color: "#060606",
+                      fontSize: "15px",
+                      border: "#b0f127",
+                      borderRadius: "10px",
+                      width: "100%",
+                      fontWeight: "700",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Wrong network
+                  </button>
+                );
+              }
               return (
                 <div style={{ display: "flex", gap: 12 }}>
                   <button
