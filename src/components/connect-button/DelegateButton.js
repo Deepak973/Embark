@@ -38,17 +38,15 @@ const DelegateButton = () => {
                     type="button"
                     style={{
                       padding: "10px 30px",
-                      background:
-                        "#b0f127",
+                      background: "#b0f127",
                       color: "#060606",
-                      fontSize:"15px",
+                      fontSize: "15px",
                       border: "#b0f127",
                       borderRadius: "10px",
                       transformStyle: "preserve-3d",
                       width: "100%",
                       fontWeight: "500",
                       cursor: "pointer",
-                      
                     }}
                   >
                     Delegate
@@ -62,12 +60,11 @@ const DelegateButton = () => {
                     type="button"
                     style={{
                       padding: "10px 30px",
-                      background:
-                      "#b0f127",
-                    color: "#060606",
-                    fontSize:"15px",
-                    border: "#b0f127",
-                    borderRadius: "10px",
+                      background: "#b0f127",
+                      color: "#060606",
+                      fontSize: "15px",
+                      border: "#b0f127",
+                      borderRadius: "10px",
                       width: "100%",
                       fontWeight: "700",
                       cursor: "pointer",
@@ -84,12 +81,11 @@ const DelegateButton = () => {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      background:
-                      "#b0f127",
-                    color: "#060606",
-                    fontSize:"15px",
-                    border: "#b0f127",
-                    borderRadius: "48px",
+                      background: "#b0f127",
+                      color: "#060606",
+                      fontSize: "15px",
+                      border: "#b0f127",
+                      borderRadius: "48px",
                       padding: "10px 30px ",
                       borderRadius: "10px",
                       fontWeight: "700",
@@ -124,12 +120,11 @@ const DelegateButton = () => {
                     type="button"
                     style={{
                       padding: "10px 30px ",
-                      background:
-                      "#b0f127",
-                    color: "#060606",
-                    border: "#b0f127",
-                    borderRadius: "10px",
-                    fontSize:"15px",
+                      background: "#b0f127",
+                      color: "#060606",
+                      border: "#b0f127",
+                      borderRadius: "10px",
+                      fontSize: "15px",
                       borderRadius: "10px",
                       fontWeight: "700",
                       cursor: "pointer",
