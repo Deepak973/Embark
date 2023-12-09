@@ -12,7 +12,9 @@ function Navbar() {
         <div class="container-fluid">
           <a class="navbar-brand navbar-logo" href="/">
             {/* <img src={logo} className="logo-img" /> */}
-            <div style={{ color: "white", fontSize: "1.5rem" }}>EMBARK</div>
+            <div style={{ color: "white", fontSize: "1.5rem" }}>
+              EMBARK | <span style={{ color: "#a6ff35" }}>GOVERNANCE</span>
+            </div>
           </a>
           <button
             class="navbar-toggler"
