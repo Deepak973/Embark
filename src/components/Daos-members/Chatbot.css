@@ -1,0 +1,23 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .chatbot-container.open {
+    transform: translateX(300px); /* Adjust the width of the chatbot as needed */
+  }
+  
+  .chat-icon {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    bottom:5%;
+    right: 10px;
+  }
+  .rsc{
+    position: absolute;
+    bottom:5%;
+    right: 10px;
+  }

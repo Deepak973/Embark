@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Meet from "./components/huddle-meet/Meet";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
