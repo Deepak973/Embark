@@ -60,17 +60,20 @@ function Home() {
       <img src={img6} className="xdc"></img>
       <img src={img7} className="op"></img>
       <div className="home-sec1">
+        <h1>
+          Discover, learn & engage with{" "}
+          <span style={{ color: "#a6ff35" }}>delegates</span>
+        </h1>
         <div className="home-pera">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit at pharetra nec
-          sed erat non metus suspendisse mus non lectus vel vitae massa id in in
-          turpis posuere laoreet tortor.
+          Book a session to kick start your journey into DAOs & its governance.
+          Catch up with delegates by tracking their Office hours at one placAOs
         </div>
         <button
           id="button-7"
           className="home-button"
           onClick={() => handleDashboardNavigation()}
         >
-          Explore DOAs
+          Explore DAOs
           <div id="dub-arrow">
             <img src={arrow} />
           </div>
@@ -82,9 +85,9 @@ function Home() {
         duration={200}
       >
         <div style={{ margin: "50px 0px" }}>
-          <h1>Our approch</h1>
-          <div>
-            As a governance delegate, we hold the following core values...
+          <h1 style={{ letterSpacing: "1px" }}>Why Embark?</h1>
+          <div style={{ letterSpacing: "1px" }}>
+            We will kick start your journey into DAOs faster than ever before...
           </div>
         </div>
 

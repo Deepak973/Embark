@@ -14,13 +14,32 @@
   margin-top: 50px;
 }
 .explore-dao {
-  border: 1px solid #00000000;
-  background: rgba(33, 34, 40, 0.5);
-  border-radius: 5px;
-  padding: 15px 20px;
+  /* border: 1px solid #2f2f2f; */
+  /* background: rgba(33,34,40,.5); */
   width: 75%;
   margin: 0px auto;
-  text-align: left;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.search-input {
+  /* border: 1px solid #2f2f2f; */
+  border: none;
+  background: rgba(33, 34, 40, 0.5);
+  width: 100%;
+  margin: 0px auto;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.search-icon {
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  /* padding: 0px 10px */
 }
 .api-card {
   border: 1px solid #2f2f2f;
