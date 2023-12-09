@@ -149,21 +149,22 @@
         "A DAO, or Decentralized Autonomous Organization, is a community-driven entity governed by smart contracts and run on blockchain technology. Joining a DAO provides you with a chance to participate in collective decision-making, contribute to projects, and earn rewards in a decentralized manner.";
     } else if (promptCount === 1) {
       response =
-        " Your wallet's total volume include inflow and outflow is $156,786.";
+        "Certainly! The onboarding process usually involves obtaining ARB tokens, connecting your crypto wallet to the Arbitrum network, and participating in community discussions. Detailed instructions can be found in Arbitrum DAO's official onboarding documentation.";
     } else if (promptCount === 2) {
-      response = "You have made a net profit of $42,456.";
+      response =
+        "Yes, you can usually exit Arbitrum DAO. The process may involve initiating a withdrawal through the DAO's mechanisms. Your ARB tokens will be returned to your wallet, but be sure to check for any exit fees or lock-up periods.?";
     } else if (promptCount === 3) {
       response =
-        "I am not designed to help with this, but currently highest yield is for $WIN";
+        "Arbitrum DAO likely employs a voting mechanism, where ARB token holders can vote on proposals. Your influence in decision-making is proportional to the number of ARB tokens you hold. Engaging in community discussions and voting is crucial for active participation";
     } else {
-      response = "Default response for additional prompts.";
+      response = "I'm just an AI-bot. I have limited data and capabilities";
     }
 
     // Reply to the user
     setTimeout(function() {
       reply(response);
       promptCount++; // Increment prompt count
-    }, 2000);
+    }, 3000);
   }
 
   function reply(message) {
