@@ -3,7 +3,9 @@ import openai
 from lighthouseweb3 import Lighthouse
 import os
 from dotenv import load_dotenv
-import io  # Add this import
+import io
+import speech_recognition as sr
+from pydub import AudioSegment
 
 # Load environment variables from .env file
 load_dotenv()
@@ -17,14 +19,61 @@ openai.api_key = os.environ.get('OPENAI_API_KEY')
 lighthouse_api_token = os.environ.get('LIGHTHOUSE_API_TOKEN')
 lh = Lighthouse(token=lighthouse_api_token)
 
-def get_video_transcript(video_url):
-    # Add code here to extract the transcript from the video
-    # You can use a separate library or service for this purpose
+def transcribe_video(video_path):
+    # Load the video file and convert it to WAV format
+    video = AudioSegment.from_file(video_path, format="mp4")
+    audio = video.set_channels(1).set_frame_rate(16000).set_sample_width(2)
+    audio.export("audio.wav", format="wav")
 
-    # For demonstration purposes, let's assume the transcript is obtained as follows:
-    transcript = "This is a sample video transcript, it has some text for the demo."
+    # Initialize recognizer class (for recognizing the speech)
+    r = sr.Recognizer()
 
-    return transcript
+    # Open the audio file
+    with sr.AudioFile("audio.wav") as source:
+        audio_text = r.record(source)
+
+    # Recognize the speech in the audio
+    text = r.recognize_google(audio_text, language='en-US')
+
+    # Return the transcribed text
+    return text
+
+def save_transcript_to_file(video_url, transcript):
+    # Save the transcript as a text file locally
+    transcript_filename = f"{video_url.replace('/', '_')}_transcript.txt"
+    with open(transcript_filename, 'w') as file:
+        file.write(transcript)
+    return transcript_filename
+
+@app.route('/api/summarize', methods=['POST'])
+def summarize_video():
+    # Get the video URL from the request
+    video_url = request.json.get('video_url')
+
+    # Transcribe the video
+    transcript = transcribe_video(video_url)
+
+    # Save the transcript as a local file
+    transcript_filename = save_transcript_to_file(video_url, transcript)
+
+    # Upload the transcript file to Lighthouse
+    lh.upload_file(file_path=transcript_filename)
+
+    # Generate a summary using OpenAI GPT-3
+    summary = generate_summary(transcript)
+
+    # Remove the local transcript file
+    os.remove(transcript_filename)
+
+    # Return the original transcript and the generated summary as JSON
+    return jsonify({
+        'video_transcript': transcript,
+        'generated_summary': summary,
+        'transcript_filename': transcript_filename
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 def generate_summary(transcript):
     # Append "please make a summary of it" to the transcript
@@ -41,27 +90,4 @@ def generate_summary(transcript):
     summary = response.choices[0].text.strip()
     return summary
 
-@app.route('/api/summarize', methods=['POST'])
-def summarize_video():
-    # Get the video URL from the request
-    video_url = request.json.get('video_url')
 
-    # Get the video transcript
-    transcript = get_video_transcript(video_url)
-
-    # Store the transcript as a text file in Lighthouse
-    transcript_filename = f"{video_url.replace('/', '_')}_transcript.txt"
-    lh.upload(source=io.StringIO(transcript), target=transcript_filename)
-
-    # Generate a summary using OpenAI GPT-3
-    summary = generate_summary(transcript)
-
-    # Return the original transcript and the generated summary as JSON
-    return jsonify({
-        'video_transcript': transcript,
-        'generated_summary': summary,
-        'transcript_filename': transcript_filename
-    })
-
-if __name__ == '__main__':
-    app.run(debug=True)
