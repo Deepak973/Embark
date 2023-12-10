@@ -20,14 +20,13 @@ function MemberProfile(props) {
   const [activeButton, setActiveButton] = useState("hours");
 
   const handleDelegateClick = async () => {
-    console.log("hello");
     try {
-      // Ensure that MetaMask is installed and the user is connected
+      // Ensure that MetaMask is installed
       if (window.ethereum) {
         // Request user authentication
-        await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
+        await window.ethereum.enable();
+
+        // MetaMask is now open, and user is connected
 
         // Handle the delegation logic here
         console.log("Delegation logic goes here");
@@ -106,13 +105,15 @@ function MemberProfile(props) {
                     </h2>
                   </div>
                   <div className="profile-btnflex">
-                    <Link
-                      to="/meet-call"
+                    <a
+                      href="https://embark-huddle-implementation.vercel.app/"
                       className="profile-btnflex"
                       style={{ textDecoration: "none" }}
+                      // target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <button>Book a call</button>
-                    </Link>
+                      <button>start a meeting</button>
+                    </a>
                     {/* <Delegate/> */}
                     <button onClick={() => handleDelegateClick()}>
                       Delegate

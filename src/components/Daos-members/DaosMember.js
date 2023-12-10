@@ -230,7 +230,7 @@ function DaosMember() {
         </div>
       </div>
 
-      <Chatbot />
+      {/* <Chatbot /> */}
     </div>
   );
 }
