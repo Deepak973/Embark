@@ -19,6 +19,25 @@ function MemberProfile(props) {
   const [isPricingOpen, setIsPricingOpen] = useState(false);
   const [activeButton, setActiveButton] = useState("hours");
 
+  const handleDelegateClick = async () => {
+    console.log("hello");
+    try {
+      // Ensure that MetaMask is installed and the user is connected
+      if (window.ethereum) {
+        // Request user authentication
+        await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+
+        // Handle the delegation logic here
+        console.log("Delegation logic goes here");
+      } else {
+        console.error("MetaMask is not installed");
+      }
+    } catch (error) {
+      console.error("Error requesting accounts:", error.message);
+    }
+  };
   const openAppInfo = () => {
     setIsAppInfoOpen(true);
     setIsDocumentOpen(false);
@@ -95,7 +114,9 @@ function MemberProfile(props) {
                       <button>Book a call</button>
                     </Link>
                     {/* <Delegate/> */}
-                    <button>Delegate</button>
+                    <button onClick={() => handleDelegateClick()}>
+                      Delegate
+                    </button>
                   </div>
                   <div className="delegate-bio">
                     <div
@@ -168,7 +189,7 @@ function MemberProfile(props) {
           <div class="col-md-9 mp-sec2">
             <h1 style={{ padding: "10px 0px" }}>Ready, set, mentor! 🚀</h1>
             <div style={{ padding: "10px 0px", fontSize: "20px" }}>
-              You've completed X hours of mentoring.
+              You've completed 3 hours of mentoring.
             </div>
             <div
               style={{
